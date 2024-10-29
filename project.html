@@ -3,183 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>central pa</title>
+    <link rel="shortcut icon" href="web/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="web/favicon-96x96.png" />
 <style>
     *{
         box-sizing: border-box;
     }
+
     body{
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(246, 246, 245);
+        font-size: large;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: larger;
     }
-#container{
-    width: 1440px;
+
+    #container{
+        width: 1440px;
+        background-color: rgb(255, 255, 255);
+        margin: 0px auto;
+    }
+     #text-photo{
+        position: absolute;
+        top: 30px;
+        left: 46px;
+        font-size: 500%;
+        opacity: 0.6;
+        background-color: rgb(211, 230, 230);
+        
+
+     }
+    #nav{
+        width: 1440px;
+        height: 50px;
+        background-color: rgb(77, 185, 30);
+        font-size: large;
+        display: flex;
+    }
+
+    #about{
+        width: 250px;
+        background-color:rgb(23, 143, 10) ;
+        text-align: center;
+    }
+
+    #events{
+        width: 250px;
+        background-color: rgb(23, 143, 10);
+    }
+
+    #plan{
+        width: 250px;
+        background-color: rgb(23, 143, 10);
+
+    }
+
     
-    margin: 0px auto;
-}
-#header{
-    width: 1440px;
-    height: 675px;
-    position: relative;
-    padding: 20px;
-    z-index: -1;
 
+    #find{
+        width: 1440px;
+        
+       margin: 0px auto;
+        position: relative;
+        text-align: center;
+        font-size: 300%;
+        
+        
+    }
 
+    #find-text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: larger;
+        background-color: ;
+        transform: translate(-50%,-50%);
+        
+        
 
-}
-#boxtext{
-    background-color: rgb(193, 193, 193);
-    width: 1400px;
-    height: 258px;
-    margin: -500px 19.98px;
-    opacity: 0.5;
-    position: relative;
-    z-index: 0;
-    font-size: 500%;
+    }
+    #intro-text{
+        width: 1340px;
+        height: 254px;
+        margin: 0px auto;
+        padding: 5px;
+        background-color: rgb(151, 151, 232);
+        text-align: center;
 
-}
-#nav{
-    width: 1287px;
-    
-    margin:  65px;
-    background-color: rgb(60, 153, 24);
-    display: flex;
-}
-#about{
-    width: 150px;
-    background-color: rgb(8, 111, 27);
-    text-align: center;
-}
-#events{
-    width: 150px;
-    background-color: rgb(8, 111, 27);
-}
+    }
+    #baker{
+        width: 1440px;
+        background-color: rgb(255, 255, 255);
+        margin-left: 20px;
+    }
 
+    #keiper{
+        width: 1440px;
+        background-color: #ffffff;
+        margin-left: 600px;
+    }
 
-#plan{
-    width: 150px;
-    background-color: rgb(8, 111, 27);
-}
-#calendar{
-    width: 1440px;
-    height: 447px;
-    text-align: center;
-    
-    display: flex;
-    
-}
+    #donut{
+        width: 1440px;
+        background-color: rgb(255, 255, 255);
+        margin-left: 20px;
+    }
 
+    #hungry{
+        width: 1440px;
+        margin: 0px auto;
+        position: relative;
+        text-align: center;
+        font-size: 300%;
+       
+    }
+    #hung-text{
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
 
+    }
+    #features{
+        width: 1440px;
+        background-color: rgb(255, 255, 255);
+        margin: 0px auto;
+        display: flex;
+        margin-left: 400px;
+        
+    }
 
-#upcoming{
-    width: 700px;
-    height: 447px;
-    margin: 900px 65px;
-    background-color: rgb(208, 188, 11);
-}
-#dates{
-    width: 700px;
-    height: 447px;
-    margin: 900px 65px;
-    background-color: blue;
-    font-size: 200%;
-}
-#date{
-    font-size: 200%;
-}
-#findtext{
-    
-    background-color: rgb(193, 193, 193);
-    width: 1400px;
-    height: 280px;
-    opacity: 0.5;
-    
-    margin:1300px 0px auto ;
-   font-size: 500%;
-   
-}
-#findyour{ 
-    width: 1400px;
-    height: 280px;
-    margin: 1300px 0px auto;
-    position: relative;
-    background-color: rgb(27, 181, 150);
-    
-}
+    #staying{
+        width: 1440px;
+        background-color: rgb(211, 230, 230);
+    }
 
-#baker{
-    width: 1440px;
-    background-color: rgb(255, 255, 255);
-}
-#keiper{
-    width: 1440px;
-    background-color: rgb(108, 144, 144);
-}
-#donut{
-    width: 1440px;
-    background-color: rgb(90, 90, 30);
-}
-#hungry{
-    width: 1440px;
-    background-color: rgb(140, 107, 171);
-}
-#features{
-    width: 1440px;
-    background-color: rgb(111, 55, 55);
-}
-#stay{
-    width: 1440px;
-    background-color: beige;
-}
-#book{
-    width: 1440px;
-    background-color: rgb(149, 149, 210);
-}
-
- </style>
+    #book{
+        width: 1440px;
+        background-color: rgb(0, 86, 86);
+    }
+</style>
 </head>
 <body>
-     <div id="container">
-     <div id=header>
-       <img src="WEB/pittsburgh-996347_1280.jpg">
-     </div>
-     <div id="boxtext">
-        <p> CENTRAL PENNSYLVANIA</p>
-        <p1> The Great and Beautiful</p1>
-     </div>
 
-     <div id="nav">
-         <div id="about">about</div>
-         <div id="events"> events</div>
-         <div id="plan">plan</div>
-     </div>
-
-
-     <div id="calendar">
-          <div id="upcoming"> <h2>UPCOMING EVENTS</h2></div>
-          <div id="dates">
-            <div id="month">OCTOBER
-                24
-                <p> Halloween Festival</p>
+    <div id="container">
+        <div id="header">
+            <img src="web/pittsburgh-996347_1280.jpg">
+            <div id="text-photo">CENTRAL PENNSYLVANIA
+                <p> The Great and Beautiful</p>
             </div>
-            
+        </div>
+         
+        
+        <div id="nav">
+            <div id="about">About</div>
+            <div id="events">Events</div>
+            <div id="plan">Plan</div>
+
+        </div>    
+         <div id="intro-text">
+            <h1>ABOUT</h1>
+            <p1>Pennsylvania, known as the "Keystone State," is a rich tapestry of history, culture, and natural beauty.
+                Located in the Northeastern United States, it was one of the original thirteen colonies and played a pivotal role in the founding of the nation.
+                The state is home to iconic landmarks, including Independence Hall and the Liberty Bell in Philadelphia, as well as the picturesque landscapes of the Appalachian Mountains and the serene beauty of the Pocono Mountains.
+            </p1>
+         </div>
+        
+        
+        <div id="find">
+            <img src="web/tree-1750784_1280-Recovered.jpg">
+            <div id="find-text">FIND YOUR ADVENTURE</div>
+        </div>
+          
+        <div id="baker"><img src="web/forest-1868028_1280.png" width="300" height="300"></div>
+        <div id="keiper"><img src="web/2forest-89179_1280.png" width="300" height="300"></div>
+        <div id="donut"><img src="web/donut.jpg" width="300" height="300"></div>
+        
+
+         <div id="hungry">
+              <img src="web/eat.png" >
+                   <div id="hung-text">HUNGRY YET ?</div>
+        
             </div>
-     </div>
-     
-     <div id="findyour"><img src="WEB/tree-1750784_1280-Recovered.jpg" alt=""></div>
-     <div id="findtext"><p>FIND YOUR ADVENTURE</p></div>
-     <div id="baker"> bakers trail</div>
-     <div id="keiper"> keipers</div>
-     <div id="donut"> donut</div>
-     <div id="hungry"> hungry</div>
-     <div id="features"> feature</div>
-     <div id="stay"> stay</div>
-     <div id="book"> book </div>
-     
-
-
+         <div id="features">
+               <div> <img src="web/horse-7637951_1280.jpg" width="200" height="200" alt=""></div>
+               <div><img src="web/fruits-2780007_1280.jpg" width="200" height="200" alt=""></div>
+              <div> <img src="web/beer-2910539_1280.jpg" width= "200" height="200" alt=""></div>
+        </div>
+         <div id="staying">staying</div>
+         <div id="book">book</div>
+         
 
     </div>
 </body>
 </html>
+
