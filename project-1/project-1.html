@@ -1,15 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1</title>
+    <title>central pa</title>
+    <link rel="shortcut icon" href="web/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="web/favicon-96x96.png" />
 <style>
     *{
         box-sizing: border-box;
     }
+    .col2{
+            width: 564px;
+            height: 353px;
+            margin: 0px 20px;
+            text-align: left;
+        }
+        .col3{
+            width: 564px;
+            height: 353px;
+            margin: 0px 80px;
+            text-align: right;
 
+        }
+        .col4{
+            width: 564px;
+            height: 353px;
+            margin: 0px 100px;
+            text-align: right;
+
+        }
     body{
         background-color: rgb(246, 246, 245);
         font-size: large;
@@ -36,7 +56,7 @@
         height: 50px;
         background-color: rgb(77, 185, 30);
         font-size: large;
-        display: flex;
+        
     }
 
     #about{
@@ -85,23 +105,26 @@
         height: 254px;
         margin: 0px auto;
         padding: 5px;
-        background-color: rgb(151, 151, 232);
+        
         text-align: center;
 
     }
     #baker{
         width: 1440px;
         background-color: rgb(255, 255, 255);
+        margin-left: 20px;
     }
 
     #keiper{
         width: 1440px;
         background-color: #ffffff;
+        margin-left: 600px;
     }
 
     #donut{
         width: 1440px;
         background-color: rgb(255, 255, 255);
+        margin-left: 20px;
     }
 
     #hungry{
@@ -121,17 +144,35 @@
     }
     #features{
         width: 1440px;
-        background-color: rgb(255, 255, 0);
+        background-color: rgb(255, 255, 255);
+        margin: 0px auto;
+        display: flex;
+        margin-left: 400px;
+        
     }
 
     #staying{
         width: 1440px;
-        background-color: rgb(211, 230, 230);
+        position: relative;
+       margin: 0px auto;
+        font-size: 300%;
+    }
+    #stay-text{
+        position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+
     }
 
     #book{
-        width: 1440px;
-        background-color: rgb(0, 86, 86);
+        width: 500px;
+        height: 100px;
+        position: relative;
+        font-size: 200%;
+        margin: 0px auto;
+        background-color: rgb(237, 255, 103);
+        text-align: center;
     }
 </style>
 </head>
@@ -167,23 +208,56 @@
         </div>
           
         <div id="baker"><img src="web/forest-1868028_1280.png" width="300" height="300"></div>
+        <div class="col2">
+            <h2>Bakers Trail</h2>
+            <p>Baker Trail-Part of this historic trail traverses the beautiful Clear Creek State Forest</p>
+            <p>The Baker Trail is a 133-mile (214 kilometer) hiking and backpacking trail, following forest paths, old jeep trails, paved roads and dirt roads through woods, farmlands, and along rivers and creeks. The Baker Trail traverses six counties (Armstrong, Jefferson, Clarion, Indiana, Forest, and Westmoreland), is a state-designated hiking trail, and is included on the trails map of Pennsylvania.</p>
+        </div>
         <div id="keiper"><img src="web/2forest-89179_1280.png" width="300" height="300"></div>
-        <div id="donut"><img src="web/woods.png" width="300" height="300"></div>
+        <div class="col3">
+            <h3>Chuck Keiper Trail</h3>
+            <p>This 53-mile trail covers some breathtaking views in the Sproul State Forest</p>
+            <p>Most of the system is in Clinton County, with a portion of the southwestern segment of the loop in Centre County. The trail is known for traversing one of the least populated regions of Pennsylvania, combining high areas on top of the Allegheny Plateau with many rugged climbs into and out of stream hollows</p>
+
+        </div>
+
+        <div id="donut"><img src="web/donut.jpg" width="300" height="300"></div>
+        <div class="col4">
+            <h4>Donut Trail</h4>
+            <p>
+                This 90-mile trail is sure to challenge even the experienced hiker
+            </p>
+            <p>Most of the trail is in Clinton County, with a short segment at its western end in Cameron County</p>
+        </div>
         
 
          <div id="hungry">
               <img src="web/eat.png" >
-                   <div id="hung-text">HUNGRY YET ?</div>
+                   <div id="hung-text">HUNGRY YET ?
+                    
+                   </div>
         
             </div>
-         <div id="features">features</div>
-         <div> <img src="" alt=""></div>
-         <div></div>
-         <div></div>
-         <div id="staying">staying</div>
-         <div id="book">book</div>
+         <div id="features">
+               <div> <img src="web/horse-7637951_1280.jpg" width="200" height="200" alt=""></div>
+               
+               <div><img src="web/fruits-2780007_1280.jpg" width="200" height="200" alt=""></div>
+              <div> <img src="web/beer-2910539_1280.jpg" width= "200" height="200" alt=""></div>
+        </div>
+        <div id="feat-text">
+          <h5> BREWERIES</h5>
+
+        </div>
+         <div id="staying">
+            <img src="WEB/bed.png" alt="">
+            <div id="stay-text">STAYING LONGER ?</div>
+         </div>
+         <div id="book">
+            <h5><a href="https://www.hilton.com/"> Book Now </a></h5>
+         </div>
          
 
     </div>
 </body>
 </html>
+
