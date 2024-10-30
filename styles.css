@@ -1,7 +1,7 @@
 #container-1{
     background-color: rgb(16, 47, 48);
-   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}  
 
 #container-2{
     background-color: rgb(163, 129, 169);
@@ -10,7 +10,7 @@
 
 #container-3{
     background-color: rgb(106, 76, 132);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
    
 }
 
