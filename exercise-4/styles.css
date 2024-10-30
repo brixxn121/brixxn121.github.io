@@ -1,0 +1,19 @@
+#container-1{
+    background-color: rgb(16, 47, 48);
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}  
+
+#container-2{
+    background-color: rgb(163, 129, 169);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#container-3{
+    background-color: rgb(106, 76, 132);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   
+}
+
+.text{
+    color: rgb(5, 5, 5);
+}
