@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+body {
+    background-color: rgb(122, 192, 112);
+}
+
+#container {
+    background-color: rgb(69, 99, 137); 
+    width: 1000px; 
+    margin: 0 auto;
+}
+
+#page-header {
+    background-color: rgb(255, 132, 249); 
+}
+
+#content {
+    background-color: rgb(22, 111, 55);
+}
+
+@media (max-width: 600px) {
+   
+    #container {
+        background-color: rgb(5, 40, 46);
+        width: 100%;
+    }
+    
+    #page-header {
+        background-color: rgb(172, 114, 114);
+    }
+    
+    #content {
+        background-color: rgb(74, 120, 104);
+    }
+    #hidden{
+      background-color: rgb(161, 0, 97);
+     width: 100%;
+     }
+    
+    #page-header h1 {
+        font-size: 1.5em;
+    }
+}
+
+#content img {
+    width: 100%;
+    height: auto;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<div id=”page-header”>
+<h1>This is my webpage</h1>
+</div>
+<div id="content">
+<img src="https://placehold.co/600x400/blue/white">
+</div>
+<div id="hidden">
+    <p>hidden</p>
+
+</div>
+</div>
+</body>
+</html>
