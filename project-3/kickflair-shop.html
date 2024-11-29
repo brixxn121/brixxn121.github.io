@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="images/site.webmanifest"> 
+</head>
+<style>
+/* Basic Styling */
+body {
+    font-family: Impact;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+header {
+    background-color: #529c4a;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    position: relative;
+}
+
+#cart {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+#cart button {
+    background-color: #ff00009e;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #000000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+.navbar-menu a:hover {
+    background-color: #ff0000;
+    border-radius: 5px;
+}
+
+/* Media Queries for responsiveness */
+
+/* For large screens (Desktop) */
+@media (min-width: 1024px) {
+    .navbar-menu {
+        display: flex;
+    }
+
+    .product {
+        width: 30%; /* 3 products per row on large screens */
+    }
+}
+
+/* For medium screens (Tablets) */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .navbar-menu {
+        display: flex;
+        justify-content: center;
+    }
+
+    .product {
+        width: 45%; /* 2 products per row on tablets */
+    }
+}
+
+/* For small screens (Mobile) */
+@media (max-width: 767px) {
+    .navbar-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar-menu a {
+        padding: 10px;
+        display: block;
+        text-align: center;
+    }
+
+    .product {
+        width: 90%; /* 1 product per row on mobile */
+    }
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.product {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.add-to-cart {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.close {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+</style>
+<body>
+    <header>
+        <h1>FOR SKATERS AND ALL</h1>
+        <div id="cart">
+            
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="navbar-menu">
+            <a href="kickflair-home.html">Home</a>
+            <a href="#">Shop</a>
+            <a href="kickflair-about.html">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Product Containers -->
+    <div class="product-container">
+        <!-- Row 1 -->
+        <div class="product" data-id="1">
+            <img src="images/Untitled design (3).png" alt="Product 1">
+            <h2>Product 1</h2>
+            <p>$10.00</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product" data-id="2">
+            <img src="images/Untitled design (1).jpg" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>$15.00</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product" data-id="3">
+            <img src="images/Untitled design.jpg" alt="Product 3">
+            <h2>Product 3</h2>
+            <p>$20.00</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-container">
+        <!-- Row 2 -->
+        <div class="product" data-id="4">
+            <img src="images/Men Hoodie Mockup, Front View.jpeg" alt="Product 4">
+            <h2>Product 4</h2>
+            <p>$25.00</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product" data-id="5">
+            <img src="images/Tote Bags Mockup Falling.png" alt="Product 5">
+            <h2>Product 5</h2>
+            <p>$30.00</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product" data-id="6">
+            <img src="images/Women T Shirts Mockup Front And Back View.png" alt="Product 6">
+            <h2>Product 6</h2>
+            <p>$35.00</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+  
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will appear here -->
+            </ul>
+            <p>Total: $<span id="total-price">0.00</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
