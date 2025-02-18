@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTFOLIO Explore</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fffefe;
+            color: black;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background: url('https://via.placeholder.com/1200x200') no-repeat center center;
+            background-size: cover;
+            border-bottom: 10px solid black;
+            flex-wrap: wrap;
+            color: black;
+        }
+
+        .navbar .logo span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: green;
+        }
+
+        .theme-toggle {
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            padding: 40px;
+            justify-items: center;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .footer {
+            height: 80px;
+            background-color: black;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                padding: 20px 10px;
+            }
+            .navbar .logo {
+                margin-bottom: 10px;
+            }
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            .gallery {
+                padding: 20px;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            .gallery img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+            .gallery img {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+            .gallery img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        body.dark {
+            background-color: #333;
+            color: white;
+        }
+
+        body.dark .navbar {
+            background: url('https://via.placeholder.com/1200x200') no-repeat center center;
+            background-size: cover;
+            border-bottom: 10px solid white;
+            color: white;
+        }
+
+        body.dark .nav-links a {
+            color: white;
+        }
+
+        body.dark .nav-links a:hover {
+            color: lightgreen;
+        }
+
+        body.dark .footer {
+            background-color: #222;
+        }
+
+        body.dark .gallery img {
+            border-radius: 15px;
+            filter: brightness(0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="p1 photos/Screenshot 2025-02-13 175224.png" alt="logo">
+            
+        </div>
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="profile.html">PROFILE</a>
+            <a href="explore.html">FEED</a>
+            <a href="home.html">NEWS</a>
+        </div>
+        <button class="theme-toggle" id="themeToggle"></button>
+    </div>
+
+    <div class="gallery">
+        <img src="p1 photos/images (3).jpg" alt="Art 1">
+        <img src="p1 photos/bratz.jpg" alt="Art 2">
+        <img src="p1 photos/bratz 2.jpg" alt="Art 3">
+        <img src="p1 photos/pexels-andrew-2123337.jpg" alt="Art 4">
+        <img src="p1 photos/images.jpg" alt="Art 5">
+        <img src="p1 photos/pexel4.jpg" alt="Art 6">
+        <img src="p1 photos/pexels-pixabay-326612.jpg" alt="Art 7">
+        <img src="p1 photos/pexels-andrew-2123337.jpg" alt="Art 8">
+        
+        
+    </div>
+
+    <div class="footer"></div>
+
+    <script>
+        const themeToggleButton = document.getElementById('themeToggle');
+
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark');
+            themeToggleButton.textContent = '';  
+        } else {
+            document.body.classList.remove('dark');
+            themeToggleButton.textContent = '';  
+        }
+
+        themeToggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            if (document.body.classList.contains('dark')) {
+                themeToggleButton.textContent = '';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeToggleButton.textContent = '';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
+</html>

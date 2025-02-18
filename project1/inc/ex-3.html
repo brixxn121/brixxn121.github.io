@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <script>
+        
+        function submitForm() {
+            
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var email = document.getElementById("email").value;
+
+            
+            if (name == "" || age == "" || email == "") {
+                alert("Please fill out all fields!");
+                return; 
+            }
+
+            
+            if (isNaN(age) || age <= 0) {
+                alert("Please enter a valid age.");
+                return;
+            }
+
+            
+            var atPos = email.indexOf("@");
+            var dotPos = email.indexOf(".", atPos);
+            if (atPos == -1 || dotPos == -1) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            
+            document.getElementById("outputName").innerHTML = '<a href="mailto:' + email + '">' + name + '</a>';
+            document.getElementById("outputAge").innerHTML = "Age: " + age;
+        }
+    </script>
+</head>
+<body>
+    <h2>User Information Form</h2>
+    <form onsubmit="event.preventDefault(); submitForm();">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="age">Age:</label><br>
+        <input type="text" id="age" name="age"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h3>Submitted Information:</h3>
+    <div id="outputName"></div>
+    <div id="outputAge"></div>
+</body>
+</html>

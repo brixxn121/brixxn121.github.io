@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArtFolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Lato', sans-serif; 
+      margin:0; 
+      padding:0; 
+      background-color:white; 
+      color:black; 
+      transition: background-color 0.5s, color 0.5s; 
+    }
+    header { 
+      background: #fff; 
+      padding: 20px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+    }
+    nav { 
+      display: flex; 
+      gap: 20px; 
+    }
+    nav a { 
+      text-decoration: none; 
+      color: black; 
+      font-weight: bold; 
+      transition: color 0.5s; 
+    }
+    .header-right { 
+      display: flex; 
+      gap: 20px; 
+      align-items: center; 
+    }
+    .logo-img { 
+      width: 62px; 
+      height: 62px; 
+      margin-right: 10px; 
+    }
+    h1 { 
+      display: flex; 
+      align-items: center; 
+      font-size: 24px; 
+    }
+    h1 span { 
+      background-color: green; 
+      color: white; 
+      padding: 0 8px; 
+    }
+    .gallery { 
+      display: grid; 
+      grid-template-columns: repeat(3, 1fr); 
+      padding: 0; /* Remove padding */
+    }
+    .gallery img { 
+      width: 446px; /* Fixed width */
+      height: 667px; /* Fixed height */
+      object-fit: cover; /* Ensures the image fits properly within the set dimensions */
+    }
+    .dark-mode { 
+      background-color: black; 
+      color: white; 
+    }
+    .dark-mode nav a { 
+      color: white; 
+    }
+    header.dark-mode { 
+      background-color: black; 
+      color: white; 
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display: flex; align-items: center;">
+      <img src="p1 photos/image 1.png" alt="Logo" class="logo-img" />
+      <h1>ART<span>FOLIO</span></h1>
+    </div>
+    <nav>
+      <a href="index.html">HOME</a>
+            <a href="profile.html">PROFILE</a>
+            <a href="explore.html">FEED</a>
+            <a href="home.html">NEWS</a>
+    </nav>
+    <div class="header-right">
+      <a href="#">LOG OUT</a>
+      <button onclick="toggleDarkMode()">TOGGLE MODE</button>
+    </div>
+  </header>
+  <div class="gallery">
+    <img src="p1 photos/pexels-francesco-ungaro-206064.jpg" alt="Art 1" />
+    <img src="p1 photos/pexels-pixabay-159862.jpg" alt="Art 2" />
+    <img src="p1 photos/pexels-andrew-2123337.jpg" alt="Art 3" />
+    <img src="p1 photos/pexels-steve-1690351.jpg" alt="Art 4" />
+    <img src="p1 photos/pexels-steve-1621793.jpg" alt="Art 5" />
+    <img src="p1 photos/images (1).jpg" alt="Art 6" />
+  </div>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      document.querySelector('header').classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
