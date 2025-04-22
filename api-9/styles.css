@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 2rem;
+  }
+  
+  #nasa-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  #nasa-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #nasa-description {
+    margin-top: 1rem;
+    color: #555;
+    font-size: 1rem;
+    max-width: 800px;
+    text-align: justify;
+  }
+  
